@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>
+        Activities
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/activies.css')}}">
+</head>
+
+<body>
+    <h1 id="heading">CHOOSE YOUR FAVOURITE COLOUR</h1>
+    <div class="rate">
+
+        <img src="{{ url_for('static', filename='images/red.png')}}" onclick="changeHeadingBg('red');" >
+       <img src="{{ url_for('static', filename='images/blue.png')}}" onclick="changeHeadingBg('blue');" >
+       <img src="{{ url_for('static', filename='images/yellow.png')}}" onclick="changeHeadingBg('yellow');">
+            </div>
+            <div class="mate">
+                <img src="{{ url_for('static', filename='/images/geen.png')}}" onclick="changeHeadingBg('green');">
+                <img src="{{ url_for('static', filename='/images/white.png')}}" onclick="changeHeadingBg('white');" >
+                <img src="{{ url_for('static', filename='/images/black.png')}}" onclick="changeHeadingBg('black');">
+            </div>
+
+            <p><a href="/memory"><button class="myButton">Next</button></a></p>
+            <script src="{{ url_for('static', filename='js/activite.js')}}"></script>
+</body>
+
+</html>

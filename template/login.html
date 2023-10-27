@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Log in form</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/admin.css')}}">
+    <script src="{{url_for('static', filename='js/admin.js')}}"></script>
+
+</head>
+<body>
+    
+
+        
+
+    <div clas="main_div">
+        <div class="box">
+            <h1>login</h1>
+                                     
+                <div class="inputBox">
+                    <input type="text" name="username"  id="username">
+                    <label>Username</label>
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" name="password" id="password">
+                    <label>password</label>
+
+                   <input type="submit" value="logIn" onclick="validate()">
+                    
+
+                </div>
+                
+                
+           
+             
+        </div>
+        
+    </div>
+
+
+</body>
+
+
+</html>

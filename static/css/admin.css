@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    
+}
+body{
+   
+    background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.box{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    
+
+}
+.box h1{
+    margin-bottom: 30px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+ .inputBox{
+    position: relative; 
+}
+ .inputBox input{
+    width: 100%;
+    padding: 10px;
+    font-size: 10px;
+    color: white;
+    letter-spacing: 1px;
+    margin-bottom: 30px; 
+    border: none;
+    border-bottom: 1px solid #fff;   
+    background: transparent;
+    outline: none;
+} 
+.inputBox label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    letter-spacing: 1px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    transition: 0.55;
+}  
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label{
+ 
+    top: -20px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 14px;
+}
+.box input[type="submit"]{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #03a9f4;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.box input[type="submit"]:hover{
+    background: mediumslateblue;
+    transition: .5s;
+}
+.inputBox a{
+    text-decoration: none;
+    padding: 0 0 0 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+    
+}
+.inputBox a:hover{
+    color: tomato;
+    transition: .5s;
+
+}

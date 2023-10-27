@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/consult.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("input[name='payment']").click(function () {
+                if ($("#Upi").is(":checked")) {
+                    $("#UpiId").show();
+                } else {
+                    $("#UpiId").hide();
+                }
+            });
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+<h2 style="text-align:center">Consultants Profile</h2>
+
+<div class="card">
+    <img src="{{ url_for('static', filename='images/doctor.png') }}" alt="John" style="width:60%">
+    <h1>John Doe</h1>
+    <p class="title">Psychiatrist, Pune Hospital</p>
+    <form method="post" autocomplete="off" name="google-sheet">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Book Now<span>&#8377;100</span>
+        </button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Payment Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" action="{{ url_for('client') }}">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="client-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="client-email" required>
+                    </div>
+                    <select class="form-select mt-4" aria-label="Select time" name="consulting-time">
+                        <option selected>Select Time</option>
+                        <option value="10:00 AM to 11:00 AM">10:00 AM to 11:00 AM</option>
+                        <option value="2:00 PM to 3:00 PM">2:00 PM to 3:00 PM</option>
+                        <option value="5:00 PM to 6:00 PM">5:00 PM to 6:00 PM</option>
+                    </select>
+                    <h5 class="mt-4">Make Payment</h5>
+                    <div class="form-group mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="payment" id="Upi" value="upi" required>
+                            <label class="form-check-label" for="Upi">UPI</label>
+                        </div>
+                    </div>
+                    <div id="UpiId" style="display: none">
+
+                        <input type="text" class="form-control" id="UpiIDnumber" name="client-upi"
+                               placeholder="number@upi"
+                               maxlength="20" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary sm" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary sm">Save</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--<script src="{{ url_for('static', filename='js/consult.js') }}"></script>-->
+</body>
+
+</html>

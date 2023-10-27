@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <title>Music page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/music style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="https://kit.fontawesome.com/c6e6fecac3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+<div class="cont">
+    <img src="{{ url_for('static', filename='images/STRESS.png')}}" style="float: left; padding-right: 5px;"
+         id="logo"><br>
+    <h2 style="float: left; padding-top: 10px;color: white;">STRESS RELIVER</h2>
+
+    <div class="navbar">
+
+
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a class="chintu" href="{{ url_for('music') }}">Music</a></li>
+            <li><a href="{{ url_for('videos') }}">Videos</a></li>
+            <li><a href="{{ url_for('blog') }}">Blogs</a></li>
+
+
+        </ul>
+    </div>
+    <div class="container">
+        <div class="music-player">
+            <div class="player">
+                <img src="{{ url_for('static', filename='images/recorder1.png')}}" alt="image" class="record" id="record">
+                <h2 id="title">Song Name</h2>
+                <div class="sildecontainer">
+                    <i class="fas fa-volume-down"></i>
+                    <input type="range" max="100" value="50" class="slider">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="controls">
+                    <button class="previous" id="previous"><i class="fas fa-step-backward"></i></button>
+                    <button class="play-pause" id="play-pause"><i class="fas fa-play"></i></button>
+                    <button class="next" id="next"><i class="fas fa-step-forward"></i></button>
+                </div>
+            </div>
+            <div class="playlist">
+                <h2>Playlist</h2>
+                <ul class="song-list">
+                    {% for music in musics %}
+                        <li data-src="{{ url_for('static',  filename='music/') ~ music[2]}}"
+                            data-name="{{music[1]}}"
+                            data-index="{{ music[0] }}"><span>{{music[1]}} </span></li>
+                    {% endfor %}
+                </ul>
+                <audio src="" id="audio"></audio>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="{{ url_for('static', filename='js/music script.js')}}"></script>
+
+</html>

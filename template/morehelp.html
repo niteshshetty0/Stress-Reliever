@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>
+            help
+        </title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/morehelp.css')}}">
+    </head>
+    <body>
+        <h1 align="center">For more help explore some more tools</h1>
+        <div class="more">
+            <a href="/pop"><figure><img src="{{url_for('static', filename='images/personal counselling-modified.png')}}" style="width: 200px;"> </figure></a>
+        
+ </div>
+ <div class="help">
+     <a href="{{ url_for('music') }}"> <img class="chinu"src="{{ url_for('static', filename='images/music.png')}}" style="width:200px;"></a>
+       <a href="{{ url_for('videos') }}">  <img class="chinu"src="{{ url_for('static', filename='images/video.png')}}" style="width:200px;"></a>
+            <a href="{{ url_for('blog') }}"> <img class="chinu"src="{{ url_for('static', filename='images/blog.png')}}" style="width:200px;"></a>
+     
+    
+ </div>
+    
+    </body>
+</html>

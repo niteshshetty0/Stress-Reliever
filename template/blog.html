@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>
+        blog
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pop.css')}}">
+
+
+</head>
+<body>
+<div class="cont">
+    <img src="{{ url_for('static', filename='images/STRESS.png')}}" style="float: left; padding-right: 5px;"
+         id="logo"><br>
+    <h2 style="float: left; padding-top: 10px;color: white;">STRESS RELIVER</h2>
+
+    <div class="navbar">
+
+
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('music') }}">Music</a></li>
+            <li><a href="{{ url_for('videos') }}">Videos</a></li>
+            <li><a class="chintu" href="{{ url_for('blog') }}">Blogs</a></li>
+
+
+        </ul>
+    </div>
+    <!--main content sarts-->
+    <div class="main">
+        <!--column1-->
+        <div class="col">
+            <div class="post">
+                <img class="post-img" src="{{ url_for('static', filename='images/rowling.jpg')}}" alt="">
+                <div class="post-info">
+                    <h2>Never Give Up Attitude</h2>
+                    <div class="user-info">
+                        <img src="{{ url_for('static', filename='images/avatar.png')}}" alt="">
+                        <span style="font-size:30px;font-weight:bold;">Joanne Rowling</span>
+                        <span>31 July 1965</span>
+                        <span>#TECH</span>
+                    </div>
+                    <input type="checkbox" class="read-more-state" id="post-3"/>
+                    <p style="font-size:15px;font-family:Arial;" class="read-more-wrap">
+                        The creator of “Harry Potter Series” has sold more than 400 million copies worldwide. Like many
+                        others, success didn’t come easy to her. She fought various battles in her life before becoming
+                        successful.
+                        As per sources, there was a time in her life when she was diagnosed with clinical depression and
+                        contemplated suicid.
+                        <span class="read-more-target">
+                            Her marriage had failed, and she was jobless with a dependent child. She was so poor that she couldn’t afford to support herself and her daughter. But, she never gave up on her dream to write. So in 1990, when she was on a train trip, the idea about a story of a young boy attending a school of wizardry came into her mind. In 1995, she finished the manuscript of her first book on an old manual typewriter. Her manuscript was rejected by twelve publishing houses. But she didn’t give up. And, today, she is United Kingdom’s best-selling living author, with an estimated fortune of £560 million, ranking her as the twelfth richest woman in the UK.
+                           </span>
+                    </p>
+                    <label for="post-3" class="read-more-trigger"></label>
+                </div>
+            </div>
+            <div class="post">
+                <img class="post-img" src="{{ url_for('static', filename='images/oprah.jpg')}}" alt="">
+                <div class="post-info">
+                    <h2>Nothing is Impossible</h2>
+                    <div class="user-info">
+                        <img src="{{ url_for('static', filename='images/avatar.png')}}" alt="">
+                        <span style="font-size:30px;font-weight:bold;">Oprah Gail Winfrey</span>
+                        <span>January 29, 1954</span>
+                        <span>#TECH</span>
+                    </div>
+                    <input type="checkbox" class="read-more-state" id="post-4"/>
+                    <p style="font-size: 15px;font-family: Arial;" class="read-more-wrap">
+                        A role model for young women everywhere, she proves that nothing is impossible. There are very
+                        few people who know how Oprah failed before becoming the richest African American woman in the
+                        world.
+                        Unlike many, Oprah wasn’t blessed with a peaceful childhood. From being abused at nine years
+                        old, Oprah got pregnant at 14.
+                        <span class="read-more-target">
+                                At an age when many of us were enjoying a carefree childhood, Oprah was struggling with problems that we can’t even imagine. But, she promised herself to not let her circumstances define her. She fought for a better future. And, with her persistence and determination, she became one of the most successful TV show anchors. Later, she took risks and started her own production company.
+                                 Today, Winfrey is one of just 13 African American billionaires and an inspiration for women everywhere.
+                            </span>
+                    </p>
+                    <label for="post-4" class="read-more-trigger"></label>
+
+                </div>
+            </div>
+        </div>
+        <!--column2-->
+        <div class="col">
+            <div class="post">
+                <img class="post-img" src="{{ url_for('static', filename='images/micky.jpg')}}" alt="">
+                <div class="post-info">
+                    <h2>Believe in Your self</h2>
+                    <div class="user-info">
+                        <img src="{{ url_for('static', filename='images/avatar.png')}}" alt="">
+                        <span style="font-size:30px;font-weight:bold;">Walter Elias Disney</span>
+                        <span>December 5, 1901</span>
+                        <span>#TECH</span>
+                    </div>
+                    <input type="checkbox" class="read-more-state" id="post-2"/>
+                    <p style="font-size:15px; font-family: Arial;" class="read-more-wrap">
+                        He was fired from the newspaper animation job for “not being creative enough.” And that was the
+                        turning point of Walt Disney’s life.
+                        Instead of moping around, Disney drew motivation from getting the boot. He started creating
+                        characters, one of which made him a fortune he couldn’t even dream of at that time.
+                        <span class="read-more-target">
+                            Today, Disney’s Mickey Mouse is so iconic that its popularity is more than almost 90% of humans that are alive. Think about that – a cartoon character so larger than life that it overshadowed real humans.
+                           Disney went on to win 22 academy awards (the most ever!) plus 4 honoraries, taking the tally to 26. He’s also the most oscar nominated person in history with a total of 59. From getting fired to becoming filthy rich for the same reason he was fired for, success stories like Disney’s should be taught in school.
+                        </span></p>
+                    <label for="post-2" class="read-more-trigger"></label>
+
+                </div>
+            </div>
+            <div class="post">
+                <img class="post-img" src="{{ url_for('static', filename='images/nicku.png')}}" alt="">
+                <div class="post-info">
+                    <h2>Be limitless</h2>
+                    <div class="user-info">
+                        <img src="{{ url_for('static', filename='images/avatar.png')}}" alt="">
+                        <span style="font-size:30px;font-weight:bold;">Nick Vujicic</span>
+                        <span>4 December 1982</span>
+                        <span>#TECH</span>
+                    </div>
+                    <input type="checkbox" class="read-more-state" id="post-1"/>
+                    <p style="font-size:15px;font-family:Arial;" class="read-more-wrap">
+                        Nick Vujicic’s story is one of the most inspirational stories and motivational ones. The
+                        problems, your reasons, your excuses, you use to hide the pain of even giving it a try are just
+                        nothing in comparison to the life of this incredible man.
+                        Born with no limbs, i.e. no hands, no legs only a little flipper alike leg. Even then, Nick
+                        Vujicic lives a life which can only be imagined by most.<span class="read-more-target">He is a Painter, Swimmer, Skydiver, and a motivational speaker who inspires people with full capability.While struggling mentally, emotionally, and physically and Bullied at school, he tried to attempt suicide when he was just an age of 10 years.
+                        Now, Finally dealing with disability, Nick decided to become vocal about living without limbs and finding hope and inspiration in life.</span>
+                    </p>
+                    <label for="post-1" class="read-more-trigger"></label>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main contains ends-->
+</body>
+
+</html>

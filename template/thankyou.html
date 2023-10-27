@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <title>Thank You Page</title>
+    <style>
+        .inner {
+            background-color: lightgrey;
+            width: 600px;
+            height: 200px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 5px 10px #888888;
+
+        }
+
+        .text {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .outer {
+            padding-left: 400px;
+            padding-top: 100px;
+
+        }
+
+        .button {
+            background-color: #4CAF50;
+
+            border: none;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: #2EE59D;
+            box-shadow: 0px 15px 20px rgba(34, 216, 17, 0.4);
+            color: #fff;
+            transform: translateY(-7px);
+        }
+
+        .container {
+            padding-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner">
+            <h2 class="text">Thank You ! Your Registration Sucessfully</h2><br><br>
+            <div class="container">
+                <a a href="{{url_for('index')}}"><button class="button">Done</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+

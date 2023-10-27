@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/video style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+
+
+    <title>Video Page</title>
+</head>
+<body>
+<div class="cont">
+    <img src="{{ url_for('static', filename='images/STRESS.png')}}" style="float: left; padding-right: 5px;"
+         id="logo"><br>
+    <h2 style="float: left; padding-top: 10px;color: white;">STRESS RELIVER</h2>
+
+    <div class="navbar">
+
+
+        <ul>
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('music') }}">Music</a></li>
+            <li><a class="chintu" href="{{ url_for('videos') }}">Videos</a></li>
+            <li><a href="{{ url_for('blog') }}">Blogs</a></li>
+
+
+        </ul>
+    </div>
+    <div class="videocont">
+
+        <div id="video_player">
+
+            <video controls poster="{{url_for('static', filename='images/thumbnail (2).png')}}" class="video"
+                   id="video">
+                <source src="{{url_for('static', filename='video/How to deal with Depression and Anxiety_ By Sandeep Maheshwari I Hindi.mp4')}}"
+                        type="video/mp4">
+            </video>
+        </div>
+
+        <div class="scrollBox">
+            {% for video in videos %}
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/thumbnail (2).png') }}">
+                <div class="box-content">
+                    <h3>{{ video[1] }}</h3>
+                   <a href="{{ url_for('static', filename='video/') ~ video[2] }}" class="btn watch-btn">Watch</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+</div>
+</body>
+<script src="{{url_for('static', filename='js/video.js')}}"></script>
+</html>
